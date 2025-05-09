@@ -1,5 +1,6 @@
 package usecase;
 
+import exceptions.InvalidQueryException;
 import exceptions.InvalidRequestException;
 import models.RelationalModel;
 import utils.HospitalDatabaseSetup;
@@ -112,7 +113,7 @@ public class OperationalUseCases {
             }
 
         } catch (SQLException e) {
-            throw new InvalidRequestException("Data extraction failed, check your parameters");
+            throw new InvalidQueryException("Data extraction failed, check your parameters");
         }
 
         return models;
