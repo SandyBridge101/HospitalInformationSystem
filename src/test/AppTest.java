@@ -18,15 +18,6 @@ public class AppTest {
     OperationalUseCases operationalUseCases=new OperationalUseCases();
     HospitalDatabaseSetup hospitalDatabaseSetup=new HospitalDatabaseSetup();
 
-
-    @Before
-    public void setUp() {
-        //MainUseCase.create(hospitalDatabaseSetup.employeeMetaData,new Object[]{"Ama","Atta","Accra","+233207600953"});
-        //List<RelationalModel> models=MainUseCase.get(hospitalDatabaseSetup.employeeMetaData);
-        //System.out.println(models.getLast().attributes.get(0));
-
-    }
-
     @Test
     public void testInsert() {
         MainUseCase.create(hospitalDatabaseSetup.employeeMetaData,new Object[]{"John","Dorsey","Accra","+23355916207"});
